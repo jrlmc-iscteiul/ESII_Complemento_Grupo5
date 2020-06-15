@@ -2,9 +2,6 @@
 
 Membros do grupo 5:
 
-82718 - António Galguinho
-82607 - Bárbara Ferreira
-
 82718-António Galguinho
 82607-Bárbara Ferreira
 82469-Beatriz Ragageles
