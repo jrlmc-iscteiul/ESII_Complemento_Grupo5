@@ -9,7 +9,6 @@ Membros do grupo 5:
 82182-Joana Cavalheiro
 82255-Joana Gaspar
 
-
 1. No site do DockerHub, fazer o download do ficheiro de instalação e seguir os passos necessários para instalar
 2. Descomprimir a pasta Grupo5 (carregar no segundo botão do rato e escolher a opção "Extrair todos...")
 3. Colocar a pasta descomprimida com o nome Grupo5 na pasta C:/ do "Este Computador"
