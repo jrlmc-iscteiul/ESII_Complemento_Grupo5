@@ -17,3 +17,6 @@ Membros do grupo 5:
 6. Efetuar o comando "docker-compose up -d"
 7. Abrir um browser e escrever na barra de endereço "localhost" 
 8. Deverá ter o site do wordpress a correr neste momento!
+
+
+Nota: Na pen entrege apenas estarão as pastas do wordpress e as docker images, que depois com o ficheiro docker-compose ira gerar os containers que irão gerar o wordpress, pois tivemos imensos problemas para por o docker a correr. Mas todos os pontos do wordpress estão feitos e é possivel mostrar-los localmente.
