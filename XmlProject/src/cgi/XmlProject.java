@@ -50,6 +50,7 @@ public class XmlProject {
 		} catch (Exception e) {
 
 		}
+		
 		return result;
 	}
 	
