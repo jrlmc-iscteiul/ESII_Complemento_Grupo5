@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<TITLE>Hello and Welcome!</TITLE>
+</HEAD>
+<BODY style="background-color:powderblue;">
+<H1 ALIGN=CENTER>COVID QUERY</H1>
+<hr>
+<form method="POST" ACTION="/cgi-bin/ten.sh">
+  <fieldset>
+    <legend>Query 1:</legend>
+     <br>
+  <label for="campo1">Campo a procurar:</label>
+  <select id="campo1" name="campo1">
+    	<option value="Internamentos">Internamentos</option>
+    	<option value="Infecoes">Infecoes</option>
+    	<option value="Testes">Testes</option>
+  </select>
+  <br>
+  <br>
+  <label for="regiao1">Regiao:</label>
+  <select id="regiao1" name="regiao1">
+		<option value="Todas">Todas</option>
+    	<option value="Lisboa">Lisboa</option>
+    	<option value="Algarve">Algarve</option>
+    	<option value="Alentejo">Alentejo</option>
+        <option value="Norte">Norte</option>
+    	<option value="Centro">Centro</option>
+  </select>
+  <br>
+  <br>
+  <label for="valor1">Valor:</label><br>
+  <select id="relationalOp1" name="relationalOp1">
+    	<option value="Igual">=</option>
+    	<option value="Diferente">!=</option>
+    	<option value="Menor"><</option>
+        <option value="Maior">></option>
+    	<option value="Menor ou igual"><=</option>
+        <option value="Maior ou igual">>=</option>
+  </select>
+  <input type="text" id="val1" name="val1" value=""><br>
+  <br>
+  <input type="radio" id="ativar" name="q1" value="ativado">
+  <label for="ativar">Ativar</label><br>
+  </fieldset>
+  <br>
+  <label for="campo">Operadores Logicos:</label>
+  <select id="ops" name="ops">
+		<option value="-">-</option>
+    	<option value="and">And</option>
+    	<option value="or">Or</option>
+    	<option value="not">Not</option>
+  </select>
+  <br>
+  <br>
+  <fieldset>
+    <legend>Query 2:</legend>
+     <br>
+  <label for="campo2">Campo a procurar:</label>
+  <select id="campo2" name="campo2">
+    	<option value="Internamentos">Internamentos</option>
+    	<option value="Infecoes">Infecoes</option>
+    	<option value="Testes">Testes</option>
+  </select>
+  <br>
+  <br>
+  <label for="regiao2">Regiao:</label>
+  <select id="regiao2" name="regiao2">
+		<option value="Todas">Todas</option>
+    	<option value="Lisboa">Lisboa</option>
+    	<option value="Algarve">Algarve</option>
+    	<option value="Alentejo">Alentejo</option>
+        <option value="Norte">Norte</option>
+    	<option value="Centro">Centro</option>
+  </select>
+  <br>
+  <br>
+  <label for="valor2">Valor:</label><br>
+  <select id="relationalOp2" name="relationalOp2">
+    	<option value="igual">=</option>
+    	<option value="diferente">!=</option>
+    	<option value="menor"><</option>
+        <option value="maior">></option>
+    	<option value="menorigual"><=</option>
+        <option value="maiorigual">>=</option>
+  </select>
+  <input type="text" id="val2" name="val2" value=""><br>
+  <br>
+  <input type="radio" id="ativar" name="q2" value="ativado">
+  <label for="ativar">Ativar</label><br>
+  </fieldset>
+  <br>
+  <br>
+  <fieldset>
+    <legend>Sum query:</legend>
+    <br>
+    <label for="campo3">Campo a procurar:</label>
+  <select id="campo3" name="campo3">
+    	<option value="Internamentos">Internamentos</option>
+    	<option value="Infecoes">Infecoes</option>
+    	<option value="Testes">Testes</option>
+  </select>
+  <br>
+  <br>
+  <input type="radio" id="ativar" name="q3" value="ativado">
+  <label for="ativar">Ativar</label><br>
+  </fieldset>
+   <br>
+  <br>
+  <input type="submit" value="Submit">
+  
+</form> 
+</form> 
+<hr>
+</BODY>
+</HTML>
