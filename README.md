@@ -1,6 +1,6 @@
 # ESII_Complemento_Grupo5
 
-Membros do grupo:
+Membros do grupo 5:
 
 82718-António Galguinho
 82607-Bárbara Ferreira
