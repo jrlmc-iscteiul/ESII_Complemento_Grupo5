@@ -23,11 +23,24 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class XmlProject.
+ */
 public class XmlProject {
 	
+	/** The result. */
 	static String result;
 	
-	private static String getValor(String regiao, String campo, Document doc) {
+	/**
+	 * Gets the valor.
+	 *
+	 * @param regiao the regiao
+	 * @param campo the campo
+	 * @param doc the doc
+	 * @return the valor
+	 */
+	public static String getValor(String regiao, String campo, Document doc) {
 		try {
 			XPathFactory xpathFactory = XPathFactory.newInstance();
 			XPath xpath = xpathFactory.newXPath();
@@ -40,7 +53,15 @@ public class XmlProject {
 		return result;
 	}
 	
-	private static boolean relationalOpValor(int valor, Object relationalOp, int val) {
+	/**
+	 * Relational op valor.
+	 *
+	 * @param valor the valor
+	 * @param relationalOp the relational op
+	 * @param val the val
+	 * @return true, if successful
+	 */
+	public static boolean relationalOpValor(int valor, Object relationalOp, int val) {
 		if(relationalOp.equals("Igual")) {
 			return valor == val;
 		} else if(relationalOp.equals("Diferente")) {
@@ -57,8 +78,18 @@ public class XmlProject {
 		return false;
 	}
 	
+	/**
+	 * Todas regioes que.
+	 *
+	 * @param campo the campo
+	 * @param relationalOp the relational op
+	 * @param val the val
+	 * @param doc the doc
+	 * @return the list
+	 * @throws XPathExpressionException the x path expression exception
+	 */
 	//Saber o valor de todas as regioes onde ...
-	private static List<String> todasRegioesQue(Object campo, Object relationalOp, Object val, Document doc) throws XPathExpressionException {
+	public static List<String> todasRegioesQue(Object campo, Object relationalOp, Object val, Document doc) throws XPathExpressionException {
 		List<String> regs = new ArrayList<>();
 		String query = "/RDF/NamedIndividual/@*";
 		XPathFactory xpathFactory = XPathFactory.newInstance();
@@ -78,7 +109,15 @@ public class XmlProject {
 		return regs;
 	}
 	
-	private static int sumRegioes(Object campo, Document doc) throws XPathExpressionException {
+	/**
+	 * Sum regioes.
+	 *
+	 * @param campo the campo
+	 * @param doc the doc
+	 * @return the int
+	 * @throws XPathExpressionException the x path expression exception
+	 */
+	public static int sumRegioes(Object campo, Document doc) throws XPathExpressionException {
 		int count = 0;
 		String query = "/RDF/NamedIndividual/@*";
 		XPathFactory xpathFactory = XPathFactory.newInstance();
@@ -96,7 +135,14 @@ public class XmlProject {
 		return count;
 	}
 	
-	private static void regioesPorCampo(Object campo, Document doc) throws XPathExpressionException {
+	/**
+	 * Regioes por campo.
+	 *
+	 * @param campo the campo
+	 * @param doc the doc
+	 * @throws XPathExpressionException the x path expression exception
+	 */
+	public static void regioesPorCampo(Object campo, Document doc) throws XPathExpressionException {
 		String query = "/RDF/NamedIndividual/@*";
 		XPathFactory xpathFactory = XPathFactory.newInstance();
 		XPath xpath = xpathFactory.newXPath();
@@ -108,7 +154,15 @@ public class XmlProject {
 		}
 	}
 	
-	private static Document acederFile() throws ParserConfigurationException, SAXException, IOException {
+	/**
+	 * Aceder file.
+	 *
+	 * @return the document
+	 * @throws ParserConfigurationException the parser configuration exception
+	 * @throws SAXException the SAX exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
+	public static Document acederFile() throws ParserConfigurationException, SAXException, IOException {
 		File inputFile = new File("covid19spreading.rdf");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -117,7 +171,10 @@ public class XmlProject {
 		return doc;
 	}
 	
-	private static void pull() {
+	/**
+	 * Pull.
+	 */
+	public static void pull() {
 		try {
 			Git git;
 			File file = new File("cloneESII");
@@ -133,7 +190,14 @@ public class XmlProject {
 		}
 	}
 	
-	private static List<String> juntarListas(List<String> l1, List<String> l2) {
+	/**
+	 * Juntar listas.
+	 *
+	 * @param l1 the l 1
+	 * @param l2 the l 2
+	 * @return the list
+	 */
+	public static List<String> juntarListas(List<String> l1, List<String> l2) {
 		List<String> conj = new ArrayList<>();
 		for(String s : l1) {
 			conj.add(s);
@@ -144,6 +208,22 @@ public class XmlProject {
 		return conj;
 	}
 	
+	/**
+	 * P.
+	 */
+	public static void p() {
+		System.out.println("<p>");
+	}
+	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 * @throws ParserConfigurationException the parser configuration exception
+	 * @throws SAXException the SAX exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws XPathExpressionException the x path expression exception
+	 */
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
 
 		System.out.println(cgi_lib.Header());
@@ -210,7 +290,7 @@ public class XmlProject {
 				}
 			}
 		}
-		System.out.println("<p>");
+		p();
 
 		if (form_data.get("q2")!=null) {
 			// Query 2
@@ -241,7 +321,7 @@ public class XmlProject {
 			}
 		}
 		
-		System.out.println("<p>");
+		p();
 
 		//SUM query
 		if (form_data.get("q3")!=null) {

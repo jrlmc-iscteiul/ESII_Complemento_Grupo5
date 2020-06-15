@@ -3,15 +3,16 @@ package cgi;
 import java.util.*;
 import java.io.*;
 
+// TODO: Auto-generated Javadoc
 /**
  * cgi_lib.java<p>
- *
+ * 
  * <p>
- *
+ * 
  * Usage:  This library of java functions, which I have encapsulated inside
  *         a class called cgi_lib as class (static) member functions,
  *         attempts to duplicate the standard PERL CGI library (cgi-lib.pl).
- *
+ * 
  *         You must invoke any Java program that uses this library from
  *         within a UNIX script, Windows batch file or equivalent.  As you
  *         will see in the following example, all of the CGI environment
@@ -19,12 +20,12 @@ import java.io.*;
  *         using the -D option of the Java interpreter.  This example
  *         UNIX script uses the "main" routine of this class as a
  *         CGI script:
- *
+ * 
  * <pre>
  * (testcgi.sh)
- *
+ * 
  * #!/bin/sh
- *
+ * 
  * java \
  *  -Dcgi.content_type=$CONTENT_TYPE \
  *  -Dcgi.content_length=$CONTENT_LENGTH \
@@ -35,16 +36,15 @@ import java.io.*;
  *  -Dcgi.script_name=$SCRIPT_NAME \
  *  -Dcgi.path_info=$PATH_INFO \
  * cgi_lib
- *
+ * 
  * </pre>
- *
+ * 
  *         Question and comments can be sent to pldurante@tasc.com.<p>
  *
- * @version 1.0
  * @author Pat L. Durante
- *
+ * @version 1.0
  */
-class cgi_lib
+public class cgi_lib
 {
 
   /**
